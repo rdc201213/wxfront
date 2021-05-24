@@ -1,0 +1,1 @@
+<scroll-view><view><view class="title-box"><label class="_span">未读消息</label></view><notification-swiper vue-id="64a39ec6-1" bind:__l="__l"></notification-swiper></view><view><view class="title-box"><label class="_span">浏览历史</label></view></view><view><view class="title-box"><label class="_span">广场</label></view></view></scroll-view>
