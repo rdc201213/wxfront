@@ -15,10 +15,19 @@
 
 		}
 	    ,{
-            "path" : "pages/index/VideoPage/VideoPage",
+            "path" : "pages/index/VideoPage/AllVideoPage",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "济同游-教学视频",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/VideoPage/DetailVideoPage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             

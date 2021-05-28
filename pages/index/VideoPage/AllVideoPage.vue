@@ -1,44 +1,57 @@
 <template>
 	<view>
-		<view class="banner" @click="goDetail(banner)">
-			<image class="banner-img" :src="banner.cover"></image>
-			<view class="banner-title">{{ banner.title }}</view>
-		</view>
-		<view class="uni-list">
-			<block v-for="(value, index) in listData" :key="index">
-				<view class="uni-list-cell" hover-class="uni-list-cell-hover" @click="goDetail(value)">
-					<view class="uni-media-list">
-						<image class="uni-media-list-logo" :src="value.cover"></image>
-						<view class="uni-media-list-body">
-							<view class="uni-media-list-text-top">{{ value.title }}</view>
-							<view class="uni-media-list-text-bottom">
-								<text>{{ value.author_name }}</text>
-								<text>{{ value.published_at }}</text>
+		<uni-search-bar :radius="100" @confirm="search" placeholder="蛙泳基础教学" clearButton=auto cancelButton="none" />
+		<uni-data-checkbox mode="button" icon="right" v-model="select" :multiple="true" :localdata="range"
+			@change="change" class="my-select-box"></uni-data-checkbox>
+		<view>
+			<view class="banner" @click="goDetail(banner)">
+				<image class="banner-img" :src="banner.cover"></image>
+				<view class="banner-title">{{ banner.title }}</view>
+			</view>
+			<view class="uni-list">
+				<block v-for="(value, index) in listData" :key="index" v-if="select_video(value)">
+					<view class="uni-list-cell" hover-class="uni-list-cell-hover" @click="goDetail(value)">
+						<view class="uni-media-list">
+							<image class="uni-media-list-logo" :src="value.cover"></image>
+							<view class="uni-media-list-body">
+								<view class="uni-media-list-text-top">{{ value.title }}</view>
+								<view class="uni-media-list-text-bottom">
+									<text>{{ value.author_name }}</text>
+									<text>{{ value.published_at }}</text>
+								</view>
 							</view>
 						</view>
 					</view>
-				</view>
-				<!-- #ifdef APP-PLUS -->
-				<view class="ad-view" v-if="(index > 0 && (index+1) % 10 == 0)">
-					<ad :adpid="adpid" @error="aderror"></ad>
-				</view>
-				<!-- #endif -->
-			</block>
+					<!-- #ifdef APP-PLUS -->
+					<view class="ad-view" v-if="(index > 0 && (index+1) % 10 == 0)">
+						<ad :adpid="adpid" @error="aderror"></ad>
+					</view>
+					<!-- #endif -->
+				</block>
+			</view>
+			<uni-load-more :status="status" :icon-size="16" :content-text="contentText" />
 		</view>
-		<uni-load-more :status="status" :icon-size="16" :content-text="contentText" />
 	</view>
 </template>
 
 <script>
-	import uniLoadMore from '@/components/uni-load-more/uni-load-more.vue';
 	var dateUtils = require('../../../common/util.js').dateUtils;
 
 	export default {
-		components: {
-			uniLoadMore
-		},
+		name: "VideoList",
 		data() {
 			return {
+				select: [0, 1, 2],
+				range: [{
+					"value": 0,
+					"text": "教学类"
+				}, {
+					"value": 1,
+					"text": "训练类"
+				}, {
+					"value": 2,
+					"text": "其他"
+				}],
 				banner: {},
 				listData: [],
 				last_id: '',
@@ -54,6 +67,7 @@
 		},
 		onLoad() {
 			this.adpid = this.$adpid;
+			console.log("1111")
 			this.getBanner();
 			this.getList();
 		},
@@ -68,6 +82,12 @@
 			this.getList();
 		},
 		methods: {
+			select_video(item) {
+				return this.select.indexOf(item.type) >= -1
+			},
+			change(e) {
+				console.log('e:', e);
+			},
 			getBanner() {
 				let data = {
 					column: 'id,post_id,title,author_name,cover,published_at' //需要的字段名
@@ -126,7 +146,8 @@
 					title: e.title
 				};
 				uni.navigateTo({
-					url: '../list2detail-detail/list2detail-detail?detailDate=' + encodeURIComponent(JSON.stringify(detail))
+					url: './DetailVideoPage?detailDate=' + encodeURIComponent(JSON
+						.stringify(detail))
 				});
 			},
 			setTime: function(items) {
@@ -174,6 +195,15 @@
 		line-height: 42rpx;
 		color: white;
 		z-index: 11;
+	}
+
+	.my-select-box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 12.5%;
+		width: 100%;
+		height: 100%;
 	}
 
 	.uni-media-list-logo {
