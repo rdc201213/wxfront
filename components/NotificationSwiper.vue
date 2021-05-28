@@ -24,6 +24,7 @@
 </template>
 <script>
 	export default {
+		name:"NotificationSwiper",
 		data() {
 			return {
 				background: ['color1', 'color2', 'color3'],

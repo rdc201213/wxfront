@@ -10,6 +10,7 @@
 			<view class="title-box">
 				<span>浏览历史</span>
 			</view>
+			<NotificationSwiper></NotificationSwiper>
 		</view>
 		<view>
 			<view class="title-box">
