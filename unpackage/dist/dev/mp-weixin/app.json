@@ -1,8 +1,14 @@
 {
   "pages": [
+<<<<<<< HEAD
     "pages/profile/profile",
     "pages/login_register/loginAndRegister",
     "pages/index/index"
+=======
+    "pages/index/HomePage/HomePage",
+    "pages/index/VideoPage/AllVideoPage",
+    "pages/index/VideoPage/DetailVideoPage"
+>>>>>>> homepage
   ],
   "subPackages": [],
   "window": {
@@ -12,6 +18,7 @@
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
+<<<<<<< HEAD
     "color": "#000000",
     "selectedColor": "#7dc5eb",
     "borderStyle": "black",
@@ -45,4 +52,31 @@
     ]
   },
   "usingComponents": {}
+=======
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "height": "50px",
+    "fontSize": "10px",
+    "iconWidth": "24px",
+    "spacing": "3px",
+    "list": [
+      {
+        "pagePath": "pages/index/HomePage/HomePage",
+        "iconPath": "static/icon/home.png",
+        "selectedIconPath": "static/icon/home-fill.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/VideoPage/AllVideoPage",
+        "iconPath": "static/icon/video.png",
+        "selectedIconPath": "static/icon/video-fill.png",
+        "text": "教学视频"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+>>>>>>> homepage
 }

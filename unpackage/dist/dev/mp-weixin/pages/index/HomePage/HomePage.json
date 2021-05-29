@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "济同游-首页",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "notification-swiper": "/components/NotificationSwiper"
+  }
+}

@@ -105,11 +105,19 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
+<<<<<<< HEAD
 /******/ 		var cssChunks = {"components/uni-list-item/uni-list-item":1,"components/uni-list/uni-list":1,"components/uni-icons/uni-icons":1,"components/uni-badge/uni-badge":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
 /******/ 				var href = "" + ({"components/uni-list-item/uni-list-item":"components/uni-list-item/uni-list-item","components/uni-list/uni-list":"components/uni-list/uni-list","components/uni-icons/uni-icons":"components/uni-icons/uni-icons","components/uni-badge/uni-badge":"components/uni-badge/uni-badge"}[chunkId]||chunkId) + ".wxss";
+=======
+/******/ 		var cssChunks = {"components/NotificationSwiper":1,"uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox":1,"uni_modules/uni-load-more/components/uni-load-more/uni-load-more":1,"uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar":1,"uni_modules/uni-card/components/uni-card/uni-card":1,"uni_modules/uni-icons/components/uni-icons/uni-icons":1};
+/******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
+/******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
+/******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
+/******/ 				var href = "" + ({"components/NotificationSwiper":"components/NotificationSwiper","uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox":"uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox","uni_modules/uni-load-more/components/uni-load-more/uni-load-more":"uni_modules/uni-load-more/components/uni-load-more/uni-load-more","uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar":"uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar","uni_modules/uni-card/components/uni-card/uni-card":"uni_modules/uni-card/components/uni-card/uni-card","uni_modules/uni-icons/components/uni-icons/uni-icons":"uni_modules/uni-icons/components/uni-icons/uni-icons"}[chunkId]||chunkId) + ".wxss";
+>>>>>>> homepage
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
