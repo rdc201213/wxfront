@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/profile/profile",
+    "pages/login_register/loginAndRegister",
     "pages/index/index"
   ],
   "subPackages": [],
@@ -9,6 +11,38 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#7dc5eb",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "static/首页.png",
+        "selectedIconPath": "static/首页2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/login_register/loginAndRegister",
+        "iconPath": "static/学习.png",
+        "selectedIconPath": "static/学习2.png",
+        "text": "教学"
+      },
+      {
+        "pagePath": "pages/login_register/loginAndRegister",
+        "iconPath": "static/班级.png",
+        "selectedIconPath": "static/班级2.png",
+        "text": "班级"
+      },
+      {
+        "pagePath": "pages/login_register/loginAndRegister",
+        "iconPath": "static/个人主页.png",
+        "selectedIconPath": "static/个人主页2.png",
+        "text": "个人主页"
+      }
+    ]
+  },
+  "usingComponents": {}
 }
