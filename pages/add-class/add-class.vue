@@ -1,13 +1,11 @@
 <template>
 	<view>
-		<view v-for="content in classArray">
-			<view class="uni-flex uni-column" style="flex: 1;-webkit-justify-content: space-between;justify-content: space-between;">
-				<view class="text" style="font-size: 30rpx;height: 120rpx;text-align: left;padding-left: 20rpx;padding-top: 10rpx;">
-					游泳{{content.type}}班（{{content.time}})
-				</view>
-				<view class="uni-flex uni-row">
-					<view class="text" style="-webkit-flex: 1;flex: 1;">任课老师：{{content.teacher}}</view>
-					<view style="justify-content:flex-end;color:#c4c8c3;font-size: 18rpx;">查看详情>></view>
+		<view class="uni-container">
+			<view v-for="content in classArray">
+				<view class="uni-list-cell" style="margin: 5rpx;">
+					<view class="uni-list-cell-db" style="padding: 30rpx;font-size: 35rpx;font-weight: bold;">游泳{{content.type}}班（{{content.time}})</view>
+					<view class="uni-list-cell-db" style="padding-right: 25rpx;">任课老师:{{content.teacher}}</view>
+					
 				</view>
 			</view>
 		</view>

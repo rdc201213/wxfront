@@ -8,14 +8,14 @@
 					</view>
 					<view class="uni-list-cell" style="height: 50px;">
 						<view class="uni-list-cell-db" style="padding-left: 25rpx;">任课老师{{content.teacher}}</view>
-						<button class="mini-btn" type="primary"  size="mini" style="font-size: 5rpx;" @click="classcontent">查看班级>></button>
+						<button class="mini-btn" type="primary"  size="mini" style="font-size: 25rpx;" @click="classcontent()">查看班级>></button>
 					</view>
 				</view>
 			</view>
 			
 		</view>
 		<view class="button-center" style="margin-top: 20rpx;">
-			<button class="mini-btn" type="primary"  size="mini" style="margin: 0 auto;">加入班级</button>
+			<button class="mini-btn" type="primary"  size="mini" style="margin: 0 auto;" @click="addclass()">加入班级</button>
 		</view>
 	</view>
 </template>
@@ -51,8 +51,14 @@
 				// uni.showToast({
 				// 					title:"点击了按钮"
 				// 				})
-				uni.redirectTo({
+				uni.navigateTo({
 				    url: '/pages/class-content/class-content'
+				})
+			},
+			addclass(){
+				
+				uni.navigateTo({
+				    url: '/pages/add-class/add-class'
 				})
 			}
 		},
