@@ -1,1 +1,0 @@
-<view><uni-search-bar vue-id="18d92887-1" radius="{{100}}" placeholder="蛙泳基础教学" clearButton="auto" cancelButton="none" data-event-opts="{{[['^confirm',[['search']]]]}}" bind:confirm="__e" bind:__l="__l"></uni-search-bar></view>

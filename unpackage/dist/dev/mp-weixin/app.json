@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/index/HomePage/HomePage",
-    "pages/index/VideoPage/VideoPage"
+    "pages/index/VideoPage/AllVideoPage",
+    "pages/index/VideoPage/DetailVideoPage"
   ],
   "subPackages": [],
   "window": {
@@ -28,12 +28,13 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/index/VideoPage/VideoPage",
+        "pagePath": "pages/index/VideoPage/AllVideoPage",
         "iconPath": "static/icon/video.png",
         "selectedIconPath": "static/icon/video-fill.png",
         "text": "教学视频"
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

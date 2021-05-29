@@ -67,7 +67,6 @@
 		},
 		onLoad() {
 			this.adpid = this.$adpid;
-			console.log("1111")
 			this.getBanner();
 			this.getList();
 		},
@@ -201,9 +200,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-left: 12.5%;
 		width: 100%;
-		height: 100%;
 	}
 
 	.uni-media-list-logo {
