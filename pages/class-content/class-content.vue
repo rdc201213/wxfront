@@ -40,13 +40,17 @@
 		methods: {
 			
 		},
-		onShow() {
+		onLoad:function(option) {
 			// let pagearr = getCurrentPages();//获取应用页面栈
 			// let currentPage = pagearr[pagearr.length - 1];//获取当前页面信息
 			// console.log('option:' , currentPage.options)//获取页面传递的信息
 			this.current_class_time=getApp().globalData.current_class_time;
 			this.current_class_teacher=getApp().globalData.current_class_teacher;
 			this.current_class_type=getApp().globalData.current_class_type;
+			this.current_class_time=option.time;
+			this.current_class_type=option.type;
+			// console.log(option.type);
+			// console.log(option.time);
 			},
 		components:{
 			UniCard
