@@ -26,7 +26,6 @@
 </template>
 
 <script>
-	import UniCard from "../../components/uni-card/uni-card.vue";
 	export default {
 		data() {
 			return {
@@ -52,9 +51,7 @@
 			// console.log(option.type);
 			// console.log(option.time);
 			},
-		components:{
-			UniCard
-		}
+		
 		// onShow:function(){
 		// 	this.current_class_time=getApp.globalData.current_class_time;
 		// 	console.log("yes");

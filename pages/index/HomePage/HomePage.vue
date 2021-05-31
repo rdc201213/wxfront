@@ -2,7 +2,7 @@
 	<scroll-view>
 		<view>
 			<view class="title-box">
-				<span>未读消息</span>
+				<span>最近通知</span>
 			</view>
 			<NotificationSwiper></NotificationSwiper>
 		</view>

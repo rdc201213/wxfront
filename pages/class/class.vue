@@ -36,7 +36,7 @@
 </template>
 
 <script>
-	import UniNoticeBar from "../../components/uni-notice-bar/uni-notice-bar.vue"; 
+	
 	export default {
 		
 		data() {
@@ -80,9 +80,7 @@
 				})
 			}
 		},
-		components:{
-			UniNoticeBar
-		},
+		
 	}
 </script>
 

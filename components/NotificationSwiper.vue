@@ -1,26 +1,20 @@
 <template>
-	<view>
+	<scroll-view>
 		<view class="uni-margin-wrap">
 			<swiper class="swiper" circular :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
 				:duration="duration">
 				<swiper-item v-for="i in 3" :key="i">
-					<uni-card title="Dcloud" mode="title" :is-shadow="true"
+					<uni-card title="周二游泳初级班" mode="title" :is-shadow="true"
 						thumbnail="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/460d46d0-4fcc-11eb-8ff1-d5dcf8779628.png"
-						extra="技术没有上限">
-						<view class="text-cut-box">display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
-							overflow: hidden;
-							word-break: break-all; /* break-all(允许在单词内换行。) */
-							text-overflow: ellipsis; /* 超出部分省略号 */
-							-webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
-							-webkit-line-clamp: 3; /** 显示的行数 **/
-							————————————————
-							版权声明：本文为CSDN博主「小也同学」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-							原文链接：https://blog.csdn.net/qq_37734787/article/details/108235785</view>
+						extra="2021-05-21">
+						<view class="text-cut-box">
+							13:30在体育馆门口集合，进行身体素质检查，记得穿好适合运动的服装。
+						</view>
 					</uni-card>
 				</swiper-item>
 			</swiper>
 		</view>
-	</view>
+	</scroll-view>
 </template>
 <script>
 	export default {

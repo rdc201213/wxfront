@@ -15,7 +15,7 @@
 		<!-- 表单1：昵称、等级、关注用户和粉丝数量 -->
 		<view class="firstForm">
 			<uni-list>
-				<button class= type="primary" open-type="getUserInfo"></button>
+				<button class type="primary" open-type="getUserInfo"></button>
 				<uni-list-item title="昵称" :clickable="true" @click="login" rightText="小白"></uni-list-item>
 				<uni-list-item title="等级" rightText="1"></uni-list-item>
 			</uni-list>
