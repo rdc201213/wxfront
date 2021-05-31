@@ -4,10 +4,10 @@
 		<!-- 顶层图片及头像栏 -->
 		<view class="topBackground">
 			<image src="../../static/logo.png" mode="aspectFit"></image>
-			<view class="flex-item flex-item-V">
+			<view v-if="true" class="flex-item flex-item-V">
 				{{message0}}
 			</view>
-			<view class="flex-item flex-item-V ">
+			<view v-if="true" class="flex-item flex-item-V">
 				<text>关注:{{message1}}&nbsp;&nbsp;&nbsp;粉丝：{{message2}}</text>
 			</view>
 		</view>
@@ -15,7 +15,7 @@
 		<!-- 表单1：昵称、等级、关注用户和粉丝数量 -->
 		<view class="firstForm">
 			<uni-list>
-				<button class= type="primary" open-type="getUserInfo"></button>
+				<button type="primary" open-type="getUserInfo"></button>
 				<uni-list-item title="昵称" clickable="true" @click="login" rightText="小白"></uni-list-item>
 				<uni-list-item title="等级" rightText="1"></uni-list-item>
 			</uni-list>
@@ -25,11 +25,11 @@
 		<!-- 表单2：设置、收藏夹、隐私、关于我们 -->
 		<view class="secondForm">
 			<uni-list>
-				<uni-list-item title="设置" link=""></uni-list-item>
-				<uni-list-item title="收藏夹" link=""></uni-list-item>
-				<uni-list-item title="隐私" link=""></uni-list-item>
+				<uni-list-item title="设置" link to="setting"></uni-list-item>
+				<uni-list-item title="收藏夹" link to="collection"></uni-list-item>
+				<uni-list-item title="隐私" link to="privacy"></uni-list-item>
 				<uni-list-item title="通知提醒":show-switch="true" @switchChange="switchChange" switchChecked="true"></uni-list-item>
-				<uni-list-item title="关于我们" link=""></uni-list-item>
+				<uni-list-item title="关于我们" link to="aboutUs"></uni-list-item>
 			</uni-list>
 		</view>
 		
@@ -45,17 +45,7 @@
 				message2:40
 			}
 		},
-		login:function(){
-			wx.login({
-				success:function(res){
-					if(res.code){
-						wx.request({
-							url:app.serverurl+''
-						})
-					}
-				}
-			})
-		},
+		
 		onLoad:function(){
 			
 		},
