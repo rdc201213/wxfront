@@ -25,7 +25,6 @@
 		<!-- 表单2：设置、收藏夹、隐私、关于我们 -->
 		<view class="secondForm">
 			<uni-list>
-				<uni-list-item title="设置" link to="setting"></uni-list-item>
 				<uni-list-item title="收藏夹" link to="collection"></uni-list-item>
 				<uni-list-item title="隐私" link to="privacy"></uni-list-item>
 				<uni-list-item title="通知提醒":show-switch="true" @switchChange="switchChange" switchChecked="true"></uni-list-item>

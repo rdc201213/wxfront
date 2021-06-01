@@ -2,23 +2,22 @@
 	"easycom": {
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
 	},
-	
+
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{"path" : "pages/profile/profile",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "个人主页",
-		        "enablePullDownRefresh": false
-		    }
-		    
+		{
+			"path": "pages/profile/profile",
+			"style": {
+				"navigationBarTitleText": "个人主页",
+				"enablePullDownRefresh": false
+			}
+
 		},
-		{   
-		    "path" : "pages/login_register/loginAndRegister",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "游泳健身APP",
-		        "enablePullDownRefresh": false
-		    } 
+		{
+			"path": "pages/login_register/loginAndRegister",
+			"style": {
+				"navigationBarTitleText": "游泳健身APP",
+				"enablePullDownRefresh": false
+			}
 		},
 		{
 			"path": "pages/index/index",
@@ -26,85 +25,69 @@
 				"navigationBarTitleText": "uni-app"
 			}
 		}
-        ,{
-            "path" : "pages/profile/setting",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "设置",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/profile/collection",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "收藏夹",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/profile/aboutUs",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "关于我们",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/profile/privacy",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "个人隐私",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+		, {
+			"path": "pages/profile/collection",
+			"style": {
+				"navigationBarTitleText": "收藏夹",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/profile/aboutUs",
+			"style": {
+				"navigationBarTitleText": "关于我们",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/profile/privacy",
+			"style": {
+				"navigationBarTitleText": "个人隐私",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"condition" : { //模式配置，仅开发期间生效
+	"condition": { //模式配置，仅开发期间生效
 		"current": 0, //当前激活的模式(list 的索引项)
-		"list": [
-			{
-				"name": "", //模式名称
-				"path": "", //启动页面，必选
-				"query": "" //启动参数，在页面的onLoad函数里面得到
-			}
-		]
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
 	},
-	"tabBar":{
-		"color":"#000000",
-		"selectedColor":"#7dc5eb",
+	"tabBar": {
+		"color": "#000000",
+		"selectedColor": "#7dc5eb",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
-		"position":"bottom",
+		"position": "bottom",
 		"list": [{
-		    "pagePath": "./pages/login_register/loginAndRegister",
-		    "iconPath": "static/首页.png",
-		    "selectedIconPath": "static/首页2.png",
-		    "text": "首页"
+			"pagePath": "./pages/login_register/loginAndRegister",
+			"iconPath": "static/首页.png",
+			"selectedIconPath": "static/首页2.png",
+			"text": "首页"
 		}, {
-		    "pagePath": "./pages/login_register/loginAndRegister",
-		    "iconPath": "static/学习.png",
-		    "selectedIconPath": "static/学习2.png",
-		    "text": "教学"
-		},{
-			"pagePath":"./pages/login_register/loginAndRegister",
-			"iconPath":"static/班级.png",
-			"selectedIconPath":"static/班级2.png",
-			"text":"班级"
-		},{
-			"pagePath":"./pages/login_register/loginAndRegister",
-			"iconPath":"static/个人主页.png",
-			"selectedIconPath":"static/个人主页2.png",
-			"text":"个人主页"
+			"pagePath": "./pages/login_register/loginAndRegister",
+			"iconPath": "static/学习.png",
+			"selectedIconPath": "static/学习2.png",
+			"text": "教学"
+		}, {
+			"pagePath": "./pages/login_register/loginAndRegister",
+			"iconPath": "static/班级.png",
+			"selectedIconPath": "static/班级2.png",
+			"text": "班级"
+		}, {
+			"pagePath": "./pages/login_register/loginAndRegister",
+			"iconPath": "static/个人主页.png",
+			"selectedIconPath": "static/个人主页2.png",
+			"text": "个人主页"
 		}]
 	}
 }
