@@ -2,7 +2,7 @@
 	font-family: uniicons;
 	font-weight: normal;
 	font-style: normal;
-	src: url('~@/static/uni.ttf') format('truetype');
+	//src: url('~@/static/uni.ttf') format('truetype');
 }
 
 /* #ifdef H5 */
@@ -16,10 +16,10 @@
 
 /*通用 */
 
-/* view{
+view{
 	font-size:28rpx;
 	line-height:1.8;
-} */
+}
 progress, checkbox-group{
 	width: 100%;
 }
@@ -60,11 +60,11 @@ form {
 }
 
 /* page */
-.common-page-head{
+.uni-page-head{
 	padding:35rpx;
 	text-align: center;
 }
-.common-page-head-title {
+.uni-page-head-title {
 	display: inline-block;
 	padding: 0 40rpx;
 	font-size: 30rpx;
@@ -74,7 +74,12 @@ form {
 	box-sizing: border-box;
 	border-bottom: 2rpx solid #D8D8D8;
 }
-
+.uni-page-body {
+	width: 100%;
+	padding:0 100px;
+	flex-grow: 1;
+	/* overflow-x: hidden; */
+}
 .uni-padding-wrap{
 	/* width:690rpx; */
 	padding:0 30rpx;

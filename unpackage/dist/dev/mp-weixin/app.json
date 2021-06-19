@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/class/class",
+    "pages/class-content/class-content",
+    "pages/index/index",
+    "pages/add-class/add-class",
+    "pages/nameList/nameList",
+    "pages/homeworks/homeworks",
+    "pages/classgroup/classgroup"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {}
+}

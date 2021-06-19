@@ -1,103 +1,78 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/HomePage/HomePage",
-			"style": {
-				"navigationBarTitleText": "济同游-首页",
-				"enablePullDownRefresh": false
-			}
+		    "path" : "pages/classpage/class/class",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "班级",
+		        "enablePullDownRefresh": false
+		    }
+		    
 		},
 		{
-			"path": "pages/profile/profile",
-			"style": {
-				"navigationBarTitleText": "个人主页",
-				"enablePullDownRefresh": false
-			}
+		    "path" : "pages/classpage/class-content/class-content",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "班级详情",
+		        "enablePullDownRefresh": false,
+				"app-plus":{
+				
+				"titleNView":false
+				
+				}
+		    }
+		    
 		},
+		
 		{
-			"path": "pages/login_register/loginAndRegister",
+			"path": "pages/classpage/index/index",
 			"style": {
-				"navigationBarTitleText": "游泳健身APP",
-				"enablePullDownRefresh": false
-			}
-		},
-
-		{
-			"path": "pages/index/VideoPage/AllVideoPage",
-			"style": {
-				"navigationBarTitleText": "济同游-教学视频",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/index/VideoPage/DetailVideoPage",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/class/class",
-			"style": {
-				"navigationBarTitleText": "班级",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/class-content/class-content",
-			"style": {
-				"navigationBarTitleText": "班级详情",
-				"enablePullDownRefresh": false
+				"navigationBarTitleText": "uni-app"
 			}
 		}
-	],
+        ,
+		{
+		    "path" : "pages/classpage/add-class/add-class",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "加入班级",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/classpage/nameList/nameList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        ,{
+            "path" : "pages/classpage/classgroup/classgroup",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/classpage/homework/homework",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
-	},
-	"condition": { //模式配置，仅开发期间生效
-		"current": 0, //当前激活的模式(list 的索引项)
-		"list": [{
-			"name": "", //模式名称
-			"path": "", //启动页面，必选
-			"query": "" //启动参数，在页面的onLoad函数里面得到
-		}]
-	},
-	"tabBar": {
-		"color": "#7A7E83",
-		"selectedColor": "#3cc51f",
-		"borderStyle": "black",
-		"backgroundColor": "#ffffff",
-		"height": "50px",
-		"fontSize": "10px",
-		"iconWidth": "24px",
-		"spacing": "3px",
-		"list": [{
-				"pagePath": "pages/index/HomePage/HomePage",
-				"iconPath": "static/icon/home.png",
-				"selectedIconPath": "static/icon/home-fill.png",
-				"text": "首页"
-			},
-			{
-				"pagePath": "pages/index/VideoPage/AllVideoPage",
-				"iconPath": "static/icon/video.png",
-				"selectedIconPath": "static/icon/video-fill.png",
-				"text": "教学视频"
-			},
-			{
-				"pagePath": "pages/class/class",
-				"iconPath": "static/班级.png",
-				"selectedIconPath": "static/班级2.png",
-				"text": "班级"
-			},
-			{
-				"pagePath": "pages/profile/profile",
-				"iconPath": "static/个人主页.png",
-				"selectedIconPath": "static/个人主页2.png",
-				"text": "个人主页"
-			}
-		]
 	}
 }
